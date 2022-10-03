@@ -6,6 +6,7 @@ import "fmt"
 //  which is a slice of strings
 type Deck []string
 
+// Create and return list of playing cards
 func newDeck() Deck{
 	cards := Deck{}
 	cardSuits := []string{"Spades","Diamonds","Hearts","Clubs"}
@@ -19,16 +20,27 @@ func newDeck() Deck{
 	return cards
 }
 
-func (d Deck) print(){
+func (d Deck) print(){           // Only instance of Deck could call print() function
 	for i, card := range d{
 		fmt.Println(i,card)
 	}
 }
 
 
-
+// Test zone
+/*
+Test zone
+*/
 type Size int;
 
 func (s Size) returnSize() Size{
 	return s
 }
+
+// end of test zone
+
+
+ 
+func deal(d Deck, handSize int) (Deck, Deck) {   // return 2 value type Deck
+	return d[:handSize], d[handSize:]
+}	
