@@ -1,27 +1,19 @@
 package main
 
-import "fmt"
+func main() {
 
-
-
-func main(){
-	
-	card:=newCard()
-	fmt.Println(card)
 	// var numberOfCards = 12
 	// printCity()
-	
+	// hello := Hello()
+	// fmt.Println(hello)
+	// cards := Deck{"Ace of Diamonds",newCard(), newCard()} //  Slice
+	// cards = append(cards, "Six of Spades")
+	// fmt.Println(cards)
+	// sizeOfDesk:= Size(52);
+	// fmt.Println("Number of cards is: ",sizeOfDesk.returnSize())
+	// cards.print()
 
-	cards := []string{"Ace of Diamonds",newCard(), newCard()} //  Slice
-	cards = append(cards, "Six of Spades")
-	fmt.Println(cards)
+	cards := newDeck()
+	cards.print()
 
-	for i, card := range cards{
-		fmt.Println( card)
-		fmt.Println(i)
-	}
-
-}
-func newCard() string{
-	return "Five of Diamonds"
 }
