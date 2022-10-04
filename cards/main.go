@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 
 	// var numberOfCards = 12
@@ -17,7 +21,11 @@ func main() {
 	// cards.print()
 	// cards[:3].print()
 
-	hand, remainingDeck := deal(cards, 5)
-	hand.print()
-	remainingDeck.print()
+	// hand, remainingDeck := deal(cards, 5)
+	// hand.print()
+	// remainingDeck.print()
+
+	// os.WriteFile("deck1")
+	fmt.Println(cards.toString())
+
 }
