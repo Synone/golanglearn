@@ -20,7 +20,11 @@ func newDeck() Deck{
 
 	for _, suit := range cardSuits{ // _ let go know that we dont need the index varialbe
 		for _, value := range cardValues{
+<<<<<<< Updated upstream
 			cards = append(cards, suit + " of " + value)
+=======
+			cards = append(cards, value+" of "+suit)
+>>>>>>> Stashed changes
 		}
 	}
 	return cards
