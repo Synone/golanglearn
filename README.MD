@@ -16,9 +16,66 @@
 
 ## Data structure
 
-- Array: fixed length list of things
+- Array: fixed length list of things, primitive data structure, can't be resized, rarely used directly
 - Slice: An array that can grow and shrink
 - Slice: Every element in a slice must be same type
 -
 
-## Receive and Arguments
+## Receiver and Arguments
+
+### Structs
+
+```go
+type person struct {
+	firstName string
+	lastName  string
+	contactInfo
+}
+type contactInfo struct {
+	email string
+	zipCode int
+}
+```
+
+### Pointer
+
+1. create a pointer struct to the original struct
+
+   ```go
+   structPointer := &originalStruct // note the & character
+   ```
+
+2. then the function with receiver:
+
+   ```go
+   func (pointerToPerson *person) updateName(newFirstName string){
+        (*pointerToPerson).firstName = newFirstName
+   }
+
+   structPointer.updateName(newName)
+   ```
+
+3. notes on pointer
+   | Value Types | Reference Types |
+   | :--- | :---: |
+   | int | slices |  
+    | float | maps |  
+    | string | channels |  
+    | bool | pointers |  
+    | structs | functions |
+   > > Value type need to use pointer to change its value
+4. [Pointer to a Struct](https://www.geeksforgeeks.org/pointer-to-a-struct-in-golang/)
+
+## Map
+
+1. To initialize the map using the make function (or a map literal) before you can add any elements
+   ```go
+    m := make(map[string]float64)
+    m["pi"] = 3.14
+   ```
+
+## Interface:
+
+1. Interfaces are not generic types
+2. Interfaces are implicit
+3.
