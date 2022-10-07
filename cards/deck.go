@@ -20,11 +20,8 @@ func newDeck() Deck{
 
 	for _, suit := range cardSuits{ // _ let go know that we dont need the index varialbe
 		for _, value := range cardValues{
-<<<<<<< Updated upstream
-			cards = append(cards, suit + " of " + value)
-=======
 			cards = append(cards, value+" of "+suit)
->>>>>>> Stashed changes
+
 		}
 	}
 	return cards
@@ -58,7 +55,7 @@ func deal(d Deck, handSize int) (Deck, Deck) {   // return 2 value type Deck
 func (d Deck) toString() string{
 	return strings.Join([]string(d)," ,")
 	
-}
+} 
 
 func (d Deck) saveToFile(filename string) error{
 	return	os.WriteFile(filename, []byte(d.toString()), 0666)

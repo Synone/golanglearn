@@ -1,14 +1,11 @@
 package main
 
-<<<<<<< Updated upstream
 import (
 	"fmt"
 	"math/rand"
 	"time"
 )
 
-=======
->>>>>>> Stashed changes
 func main() {
 
 	// var numberOfCards = 12
@@ -40,17 +37,10 @@ func main() {
 	// fmt.Println(anotherByteArr)
 
 	newCards := newDeck()
-<<<<<<< Updated upstream
 	newCards.shuffle()
 	newCards.print()
 	fmt.Println(time.Now().UnixNano())
 
 	 rand.Seed(time.Now().UnixNano())
 	fmt.Println(rand.Intn(12))
-=======
-
-	// newCards.shuffle()
-	newCards.print()
-
->>>>>>> Stashed changes
 }

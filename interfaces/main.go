@@ -23,7 +23,7 @@ func main() {
 
 	printGreeting(eb)
 	// printGreeting(sb)
-
+	
 	
 
 }
@@ -32,6 +32,8 @@ func printGreeting(b bot){
 	fmt.Println(b.getGreeting())
 	fmt.Println(b.getSound(12))
 }
+
+
 
 func (englishBot) getGreeting() string {
 	// Very custom logic for generating an english greeting
