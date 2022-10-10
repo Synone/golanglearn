@@ -78,4 +78,10 @@ type contactInfo struct {
 
 1. Interfaces are not generic types
 2. Interfaces are implicit
-3.
+
+## Go routines
+
+- "go" keyword in front of a function will create a new go routine - only infront of a function call
+- channel is used for go routines to communicate btw go routines
+- channel type <T> only transfer data type <T> with routines
+-
